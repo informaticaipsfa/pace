@@ -11,7 +11,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="<?php echo base_url()?>index.php/panel/Panel/fideicomitente">
-                  <i class="fa fa-credit-card"></i> Cargar Fedeicomitente</a>
+                  <i class="fa fa-credit-card"></i> Cargar Fedeicomitente2</a>
                 </li>
                 <li><a href="<?php echo base_url()?>index.php/panel/Panel/beneficiario"><i class="glyphicon glyphicon-user"></i> Consultar Beneficiario</a></li>
                 <li><a href="<?php echo base_url()?>index.php/panel/Panel/actualizar"><i class="fa fa-edit"></i> Actualizar</a></li>

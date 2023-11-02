@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',//'localhost',
+	'hostname' => '192.168.12.150', //'localhost',
 	'username' => 'postgres',
 	'password' => 'za63qj2p', //'123456'
-	'database' => 'pace',// 'pace'
+	'database' => 'pace1', //'pace'
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
