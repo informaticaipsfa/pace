@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+.form-group {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-group input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0); 
+}
+
+.form-group label {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  background: #008D4C;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 3.6rem;
+  width: 14rem;
+  font-size:13px;
+  padding:5px;
+  font-weight:500;
+}
+
+.form-group label:hover {
+  background: #006d3a;
+}
+
+/* Estilo básico para input de archivo */
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #2980b9;
+}
+
+
+</style>
+
   <?php $this->load->view('inc/cabecera.php');?>
     <!-- Site wrapper -->
     <div class="wrapper">
 
       <?php $this->load->view('inc/top.php');?>
-
  
       <!-- =============================================== -->
 
@@ -25,78 +83,87 @@
         </section>
 
         <!-- Main content -->
+
         <section class="content">
-
             <!-- Default box -->
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Carga de fideicomientes</h3>
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                            <i class="fa fa-minus"></i></button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fa fa-times"></i></button>
+
+            <div class="box box-solid box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Cargar Fideicomitente</h3>
+                      <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" onclick="principal()" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Salir"><i class="fa fa-times"></i></button>
+                      </div>
                     </div>
-                </div>
-                <div class="box-body">
-                    <b><p>Seleccione archivos</p></b>
 
+                <div class="box-body"  style="padding: 1rem;">
 
-                        <div class="col-md-4">
-                      Tipo de Archivo:
-                            </div>
-                        <div class="col-md-4">
-                             <div class="radio">
-                    <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                      Nuevos Fideicomitentes
-                    </label>
-                  </div>
-                            </div>
-                        <div class="col-md-4">
-                        <div class="radio">
-                    <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                      Actualización Fideicomitentes
-                    </label>
-                  </div>
-                            </div>
-<br><br>
+                    <b><p>Tipo de archivo</p></b>
 
-                        <div class="col-md-4">
-                            Tipo de Reporte:
+                    <div class="col-md-4">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Nuevos Fideicomitentes
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <select class="form-control select2" style="width: 100%;" id='situacion'>
+                          <option value="001">-- Componente --</option>
+                          <option value='002'>Ejercito</option>
+                          <option value='003'>Armada</option>                     
+                          <option value="004">Aviacion</option>         
+                          <option value="005">GNB</option>
+                      </select>
+                    </div>
+                    
+                    
+                    <div class="col-md-12">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Actualización Fideicomitentes
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Cruce con PACE
+                        </label> 
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <hr>
+                    </div>
+
+                    <div class="col-md-12">
+                      <form action="#" method="post">
+                        <div class="form-group">
+                          <label for="exampleInputFile"><i class="fa fa-file"></i>&nbsp;&nbsp;Seleccionar archivo</label>
+                          <input type="file" id="exampleInputFile">
                         </div>
-                        <div class="col-md-4">
-                            <div class="radio">
-                    <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                     Reporte de Comparación SAMAN
-                    </label>
-                  </div>
-                        </div>
-                        <div class="col-md-4">
-                             <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                     Reporte de Comparación PACE
-                        </div>
-                        <div class="col-md-12">
-              <form action="#" method="post">
- 
-              <div class="form-group">
-                <label for="exampleInputFile">Archivo Nuevos Beneficiarios:</label>
-                <input type="file" id="exampleInputFile">
-              </div>
+                    </div>
 
-                     
-          <a href="#!" onclick="cargar()" 
-          class="btn btn-primary" target="_top" id='btnActualizar'><i class="fa fa-refresh"></i>&nbsp;&nbsp;Cargar Archivos</a> 
+                    <div class="col-md-12">
+                      <hr>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <button href="#!" onclick="cargar()" class="btn btn-primary" target="_top" id='btnActualizar'><i class="fa fa-refresh"></i>&nbsp;&nbsp;Cargar Archivos</button> 
+                      <button type="button" class="btn btn-danger pull-right"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Ver Registro  </button>
+                    </div>
 
-                
-          <button type="button" class="btn btn-danger pull-right"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Ver Registro  
-          </button>
-          </form>
+                  </form>
           </div>
                 </div>
             </div>
+          </div>
             <!-- /.box -->
 
         </section>
@@ -104,7 +171,7 @@
 
         <!-- Main content -->
 
-
+        
       </div><!-- /.content-wrapper -->
 
       <footer class="main-footer">
@@ -119,5 +186,6 @@
 
     <?php $this->load->view('inc/pie.php');?>
     <script src="<?php echo base_url()?>application/modules/panel/views/js/carga_fideicomitente.js"></script>
+   
     </body>
 </html>

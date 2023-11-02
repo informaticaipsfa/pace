@@ -37,10 +37,8 @@
                             <i class="fa fa-times"></i></button>
                           </div>
                         </div>
+
                         <div class="box-body">
-                     
-                          
-                            
                           
                             <div class="col-md-4">
                               <label>Fecha:</label>
@@ -52,8 +50,6 @@
                               </div>
                           </div>
                    
-
-                          
                           <div class="col-md-4">
                             <label>Seleccionar Directivas:</label>
                                 <select class="form-control select2" style="width: 100%;" id="directiva">
