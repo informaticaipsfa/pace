@@ -155,7 +155,7 @@ input[type="file"] {
                     </div>
                     
                     <div class="col-md-12">
-                      <button href="#!" onclick="cargar()" class="btn btn-primary" target="_top" id='btnActualizar'><i class="fa fa-refresh"></i>&nbsp;&nbsp;Cargar Archivos</button> 
+                      <a href="#!" onclick="cargar()" class="btn btn-primary" target="_top" id='btnActualizar'><i class="fa fa-refresh"></i>&nbsp;&nbsp;Cargar Archivos</a> 
                       <button type="button" class="btn btn-danger pull-right"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Ver Registro  </button>
                     </div>
 
