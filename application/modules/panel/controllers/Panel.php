@@ -34,16 +34,14 @@ class Panel extends MY_Controller {
 	public function fideicomitente(){
 		$this->load->view("menu/beneficiario/fideicomitente");
 	}
-
-
- 
+	
 	public function beneficiario(){
 		$this->load->model('beneficiario/MHistorialMovimiento');
 		$data['Movimientos'] = $this->MHistorialMovimiento->listarTodo();
 
 		$this->load->view("menu/beneficiario/beneficiario", $data);
 	}
-
+	
 	public function asociarcuenta(){
 		$this->load->view("menu/beneficiario/cuentabancaria");
 	}
@@ -53,7 +51,7 @@ class Panel extends MY_Controller {
 		$data['componente'] = $this->MComponente->listarTodo();
 		$this->load->view("menu/beneficiario/reporte", $data);
 	}
-
+	
 	public function actualizar(){
 		$this->load->view("menu/beneficiario/actualizarbeneficiario");
 	}
@@ -61,6 +59,11 @@ class Panel extends MY_Controller {
 	public function finiquitos(){
 		$this->load->view("menu/beneficiario/finiquito");
 	}
+
+	public function patria(){
+		$this->load->view("menu/beneficiario/patria");
+	}
+
 	public function historialsueldo(){
 		$this->load->view("relaciondesueldo");
 	}
@@ -68,18 +71,19 @@ class Panel extends MY_Controller {
 	public function sueldolote(){
 		$this->load->view('sueldolote');
 	}
-
+	
 	public function ordenpago(){
 		$this->load->view("menu/orden_pago/orden");
 	}
-
+	
 	public function ordenpagoejecutada(){
 		$this->load->view("menu/orden_pago/ejecutada");
 	}
-
+	
 	public function consultarmovimiento(){
 		$this->load->view("menu/beneficiario/consultarmovimiento");
 	}
+	
 
 	public function medidajudicial(){
 		$this->load->model('beneficiario/MEstado');
@@ -226,7 +230,7 @@ class Panel extends MY_Controller {
 		$data['Beneficiario'] = $this->MBeneficiario;
 		$this->load->view('reporte/beneficiario/hoja_vida', $data);
 	}
-
+	
 	public function cartaBanco($cedula = '', $cod = ''){
 		$this->load->model('beneficiario/MBeneficiario');
 		$this->load->model('beneficiario/MHistorialMovimiento');
