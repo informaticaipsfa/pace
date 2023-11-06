@@ -31,12 +31,12 @@ class Panel extends MY_Controller {
 		$this->load->view("view_home");
 	}
 
-	
-
 	public function fideicomitente(){
 		$this->load->view("menu/beneficiario/fideicomitente");
 	}
 
+
+ 
 	public function beneficiario(){
 		$this->load->model('beneficiario/MHistorialMovimiento');
 		$data['Movimientos'] = $this->MHistorialMovimiento->listarTodo();

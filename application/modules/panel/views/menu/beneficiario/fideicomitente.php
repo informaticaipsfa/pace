@@ -38,25 +38,10 @@
   background: #006d3a;
 }
 
-/* Estilo básico para input de archivo */
-input[type="file"] {
-  display: none;
+.centrar{
+  display:flex;
+  justify-content:center;
 }
-
-.custom-file-button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.custom-file-button:hover {
-  background-color: #2980b9;
-}
-
-
 </style>
 
   <?php $this->load->view('inc/cabecera.php');?>
@@ -100,8 +85,9 @@ input[type="file"] {
 
                     <b><p>Tipo de archivo</p></b>
 
-                    <div class="col-md-4">
-                      <div class="radio">
+
+                      <div class="col-md-4">
+                        <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
                           Nuevos Fideicomitentes
@@ -144,12 +130,13 @@ input[type="file"] {
 
                     <div class="col-md-12">
                       <form action="#" method="post">
-                        <div class="form-group">
-                          <label for="exampleInputFile"><i class="fa fa-file"></i>&nbsp;&nbsp;Seleccionar archivo</label>
-                          <input type="file" id="exampleInputFile">
+                        <div class="form-group" style="display:flex; align-items: center; margin-bottom:0;">
+                          <label for="exampleInputFile" class="custom-file-label"><i class="fa fa-file"></i>&nbsp;&nbsp;Seleccionar archivo</label>
+                          <input type="file" id="exampleInputFile" class="custom-file-label" onchange="displaySelectedFile()">
+                          <span id="vPrevia" style="margin-left: .5rem"></span>
                         </div>
                     </div>
-
+                    
                     <div class="col-md-12">
                       <hr>
                     </div>
@@ -186,6 +173,15 @@ input[type="file"] {
 
     <?php $this->load->view('inc/pie.php');?>
     <script src="<?php echo base_url()?>application/modules/panel/views/js/carga_fideicomitente.js"></script>
+    <script>
+      function displaySelectedFile() {
+        const input = document.getElementById("exampleInputFile");
+        const fileName = input.files[0].name; // Obtiene el nombre del archivo seleccionado
+
+        const vPrevia = document.getElementById("vPrevia");
+        vPrevia.textContent = fileName; // Actualiza la etiqueta con el nombre del archivo
+      }
+    </script>
    
     </body>
 </html>
