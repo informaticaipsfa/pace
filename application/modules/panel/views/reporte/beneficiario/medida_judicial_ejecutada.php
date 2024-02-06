@@ -179,7 +179,7 @@ th {
       <textarea style="width: 100%; height: 60px"></textarea>
      <br>
 
-     PJBS/<?php echo $Beneficiario->usuario_modificacion;?>
+     RJBB/<?php echo $Beneficiario->usuario_modificacion;?>
    </td>
 
  </tr>

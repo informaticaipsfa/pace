@@ -147,7 +147,7 @@ th {
      <br>
 
 
-     PJBS/<?php echo $_SESSION['usuario'];?>
+     RJBB/<?php echo $_SESSION['usuario'];?>
    </td>
 
  </tr>

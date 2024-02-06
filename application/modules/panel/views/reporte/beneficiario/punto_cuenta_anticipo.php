@@ -222,7 +222,7 @@
     </tr>
  </table>
 </center>
-&emsp;&emsp;&emsp;PJBS/<?php echo $usuario;?>
+&emsp;&emsp;&emsp;RJBB/<?php echo $usuario;?>
 
   <script language="Javascript">
     function imprimir(){

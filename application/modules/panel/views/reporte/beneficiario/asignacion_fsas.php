@@ -213,7 +213,7 @@ th {
      echo $o[0];
       ?></font>
      <br><br>
-     PJBS/<?php echo $Beneficiario->usuario_modificacion;?>
+     RJBB/<?php echo $Beneficiario->usuario_modificacion;?>
    </td>
 
  </tr>

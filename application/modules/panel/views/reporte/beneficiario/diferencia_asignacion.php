@@ -199,7 +199,7 @@ th {
        echo $o[0];
       ?>
      <br><br>
-    PJBS/<?php echo $Beneficiario->usuario_modificacion;?>
+    RJBB/<?php echo $Beneficiario->usuario_modificacion;?>
    </td>
 
  </tr>

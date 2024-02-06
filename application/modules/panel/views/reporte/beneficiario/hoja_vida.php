@@ -642,8 +642,8 @@ th {
 <table>
   <tr>
     <td style="border:0px; width: 50%; text-align: center;"><b>
-      PEDRO JAVIER BONILLA <BR>
-      CC.<BR>
+      RAFAEL DE JESÚS BASTIDAS BASTIDAS <BR>
+      MAY.<BR>
       JEFE DEL DPTO. DE FIDEICOMISO<BR>
       </b>
     </td>
